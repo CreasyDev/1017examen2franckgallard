@@ -1,32 +1,39 @@
 <template>
   <div>
-    <h1 class="clearfix">
-      Header
-    </h1>
+    <div id="nav">
+        <router-link v-for="menu in menuList" :key="menu.name" :to="menu.path">
+        {{ menu.name }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        </router-link>
+    </div>
+    <hr/>
+    <router-view />
   </div>
 </template>
 
 <script>
-    export default {
-        name: 'Header'
-    }
+import { routes } from "../router/index.js";
+export default {
+  name: "Header",
+  data() {
+    return {
+      menuList: routes,
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    h1 {
-    margin: 40px 0 0;
-    }
+#nav {
+  padding: 30px;
+}
 
-    .align_right {
-        text-align : right;
-        float: right;
-        overflow: auto;
-    }
-    .float_right {
-        overflow: auto
-    }
-    .clearfix {
-      overflow: auto
-    }
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #0083f5;
+}
 </style>
