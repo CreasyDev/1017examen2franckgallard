@@ -1,19 +1,22 @@
 <template>
   <div>
     <div id="nav">
-        <router-link v-for="menu in menuList" :key="menu.name" :to="menu.path">
-        {{ menu.name }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        </router-link>
+      <router-link v-for="menu in menuList" :key="menu.name" :to="menu.path">
+        {{ menu.name | translate }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      </router-link>
     </div>
-    <hr/>
+    <hr />
     <router-view />
   </div>
 </template>
 
 <script>
 import { routes } from "../router/index.js";
+import mixin from "../mixins/mixin.js";
+
 export default {
   name: "Header",
+  mixins: [mixin],
   data() {
     return {
       menuList: routes,

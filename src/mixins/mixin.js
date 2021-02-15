@@ -3,6 +3,7 @@ const TRANSLATIONS = {
   en: {
     menuHome: "Home",
     menuProjects: "Projects",
+    menuContact: "Contact",
     welcome: "Welcome",
     connectedMessage: "You are connected",
     notConnectedMessage: "You are not connected",
@@ -39,6 +40,7 @@ const TRANSLATIONS = {
   fr: {
     menuHome: "Accueil",
     menuProjects: "Projets",
+    menuContact: "Contact",
     welcome: "Bienvenue",
     connectedMessage: "Vous êtes connectés",
     notConnectedMessage: "Vous n'êtes pas connectés",
