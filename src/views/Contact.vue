@@ -7,31 +7,31 @@
         <column :xs="12" :md="6" :lg="6">
           <div class="text_align_left">
             <h2>Franck Gallard</h2>
-            <p>Contactez-moi pour tout type d'opportunité!</p>
+            <p>{{ 'contactMe' | translate }}!</p>
           </div>
         </column>
         <column :xs="12" :md="6" :lg="6">
           <div class="block_contact">
-            <h2 class="contact_title">Formulaire</h2>
+            <h2 class="contact_title">{{ 'form' | translate }}</h2>
             <hr />
             <form>
               <div>
-                <label for="nom">Nom</label>
-                <input v-model="nom" type="text" placeholder="Nom" />
+                <label for="lastName">{{ 'lastName' | translate }}</label>
+                <input v-model="lastName" type="text" />
               </div>
               <br />
               <div>
-                <label for="prenom">Prénom</label>
-                <input v-model="prenom" type="text" placeholder="Prénom" />
+                <label for="prenom">{{ 'firstName' | translate }}</label>
+                <input v-model="prenom" type="text"  />
               </div>
               <br />
               <div>
-                <label for="courriel">Courriel</label>
-                <input v-model="courriel" type="text" placeholder="Courriel" />
+                <label for="email">{{ 'email' | translate }}</label>
+                <input v-model="email" type="text"  />
               </div>
               <br />
               <div>
-                <label for="courriel">Catégorie</label>
+                <label for="category">{{ 'category' | translate }}</label>
                 <select>
                   <option v-for="option in listOptions" :key="option.value">
                     {{ option.label }}
@@ -40,7 +40,7 @@
               </div>
               <br />
               <button @click="showThisModal">
-                Soumettre
+                {{ 'submit' | translate }}
               </button>
               <br />
             </form>
@@ -54,12 +54,14 @@
 <script>
 import Vue from "vue";
 import { Row, Column } from "vue-grid-responsive";
+import mixin from '../mixins/mixin.js'
 
 Vue.component("row", Row);
 Vue.component("column", Column);
 
 export default {
   name: "Contact",
+  mixins: [mixin],
   data: function() {
     return {
       listOptions: [

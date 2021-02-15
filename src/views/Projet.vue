@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="projet_title">Mes projets</h2>
+    <h2 class="projet_title">{{ 'myProjects' | translate }}</h2>
     <br />
     <div class="block">
       <row container :gutter="50">
@@ -10,9 +10,7 @@
               <h4>Spotify</h4>
               <strong>Cegep de Trois-Rivières</strong>
               <p class="clearfix">
-                Projet semblable à <b>Spotify</b> réalisé avec la technologie
-                <b>ReactJs</b> dans le cadre de ma formation
-                <b>A.E.C Développement Web Front-end</b>.
+                {{ 'projectContent1' | translate }}.
               </p>
             </div>
           </div>
@@ -25,10 +23,7 @@
               <h4>Saveurs Jamaicaines</h4>
               <strong>Cegep de Trois-Rivières</strong>
               <p class="clearfix">
-                Projet de commande en ligne pour un restaurant
-                <b>Saveurs Jamaicaines</b> développé en <b>PWA Reactjs</b> dans
-                le cadre de ma formation
-                <b>A.E.C Développement Web Front-end</b>.
+                {{ 'projectContent2' | translate }}.
               </p>
             </div>
           </div>
@@ -41,8 +36,7 @@
               <h4>App1</h4>
               <strong>Cegep de Trois-Rivières</strong>
               <p class="clearfix">
-                <b>TP1</b> réalisé avec le framework <b>VueJs</b> dans le cadre
-                de ma formation <b>A.E.C Développement Web Front-end</b>.
+                {{ 'projectContent3' | translate }}.
               </p>
             </div>
           </div>
@@ -55,9 +49,7 @@
               <h4>Forfait Voyage</h4>
               <strong>Cegep de Trois-Rivières</strong>
               <p class="clearfix">
-                Projet de forfait vogage développé avec
-                <b>Angular</b> dans le cadre de ma formation
-                <b>A.E.C Développement Web Front-end</b>.
+                {{ 'projectContent4' | translate }}.
               </p>
             </div>
           </div>
@@ -70,12 +62,14 @@
 <script>
 import Vue from "vue";
 import { Row, Column } from "vue-grid-responsive";
+import mixin from '../mixins/mixin.js'
 
 Vue.component("row", Row);
 Vue.component("column", Column);
 
 export default {
   name: "Projet",
+  mixins: [mixin]
 };
 </script>
 

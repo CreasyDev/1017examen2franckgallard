@@ -1,40 +1,28 @@
 <template>
   <div>
-    <h3>Bienvenue!</h3>
+    <h3>{{ 'welcome' | translate }}!</h3>
     <div v-if="isLogged">
       <label class="">
-        Vous êtes connectés.
-        <a href="#" @click="toggleLogin">Se déconnecter</a>
+        {{ 'connectedMessage' | translate }}.
+        <a href="#" @click="toggleLogin">{{ 'logout' | translate }}</a>
       </label>
       <hr />
-      <h2 class="profil">Mon profile</h2>
+      <h2 class="profil">{{ 'myProfile' | translate }}</h2>
       <br />
       <div class="block">
         <row container :gutter="50">
           <column :xs="12" :md="4" :lg="3">
             <div class="text_align_left">
               <h2>Franck Gallard</h2>
-              <h5>Développeur Front-end</h5>
+              <h5>{{ 'frontEndDeveloper' | translate }}</h5>
             </div>
           </column>
           <column :xs="12" :md="8" :lg="9">
             <div class="block_about">
-              <h3 class="text_align_left">À Propos de Moi</h3>
-              <p>
-                De nature autodidacte, j'ai construit mon expérience à travers
-                mes treize années passées dans l'univers du Web. En tant
-                qu'intégrateur j'ai travaillé sur des projets variés pour des
-                petites et moyennes entreprises. J'ai réussi à relever de
-                nombreux défis. Notamment, lorsque la complexité de certaines
-                demandes techniques allaient bien au-delà de mes compétences.
+              <h3 class="text_align_left">{{ 'aboutMe' | translate }}</h3>
+              <p>{{ 'myProfileContent1' | translate }}.
               </p>
-              <p>
-                J'aime le visuel, c'est ce qui me permet de penser une interface
-                pour en faire une expérience utilisateur adaptée. Bien que
-                l'esprit d'initiative fasse partie de ma personnalité,
-                l'intégrité, le partage et la cohésion de groupe sont des traits
-                que je possède. Mon objectif à court terme est d'évoluer au sein
-                d'une agence Web en tant que Développeur Front-end Junior.
+              <p>{{ 'myProfileContent2' | translate }}.
               </p>
             </div>
           </column>
@@ -43,40 +31,23 @@
           <column :xs="0" :md="4" :lg="3"> </column>
           <column :xs="12" :md="8" :lg="9">
             <div class="block_about">
-              <h3 class="text_align_left">Expériences</h3>
+              <h3 class="text_align_left">{{ 'experiences' | translate }}</h3>
               <div class="experience">
-                <h4>Intégrateur Web - PIGISTE</h4>
-                <strong>Cowansville, Qc . 2013 - Aujourd'hui </strong>
-                <p class="clearfix">
-                  Participer au développement de services web et mobiles: HTML5
-                  | SASS | JavaScript. Programmer des interfaces afin qu'elles
-                  soient animées et interactives : JavaScript. Effectuer la
-                  refonte de différentes parties d'un projet en utilisant: HTML5
-                  | CSS3 | SASS Déployer différents projets et effectuer des
-                  tests afin de s'assurer qu'ils soient fonctionnels.
+                <h4>{{ 'experienceOneTitle' | translate }} - PIGISTE</h4>
+                <strong>Cowansville, Qc . 2013 - {{ 'today' | translate }} </strong>
+                <p class="clearfix">{{ 'myExperienceContent1' | translate }}.
                 </p>
               </div>
               <div class="experience">
-                <h4>Designer / Intégrateur Web - EXEKO</h4>
+                <h4>{{ 'designer' | translate }} / {{ 'experienceOneTitle' | translate }} - EXEKO</h4>
                 <strong>Montréal, Qc . 2012 - 2013 </strong>
-                <p class="clearfix">
-                  Intégrer du contenu sur le site de l'organisme via les
-                  langages hypers médias: HTML | CSS. Rendre les pages
-                  interactives au moyen de la librairie et langage: JQuery |
-                  JavaScript natif. Réaliser les flyers, newsletters,
-                  banderoles, photomontages avec: Photoshop | Illustrator | HTML
-                  | CSS.
+                <p class="clearfix">{{ 'myExperienceContent2' | translate }}.
                 </p>
               </div>
               <div class="experience">
-                <h4>Webmestre - LA CASA NELLA</h4>
+                <h4>{{ 'webMaster' | translate }} - LA CASA NELLA</h4>
                 <strong>Montréal, Qc . 2008 - 2012 </strong>
-                <p class="clearfix">
-                  Gérer l'hébergement ainsi que les mises à jour du site web de
-                  l'entreprise: HTML | CSS. Veiller à la stabilité des
-                  fonctionnalités liées à la base de données: PHP | MySQL.
-                  Charger de la communication des nouveaux produits et de
-                  l'information via les médias sociaux.
+                <p class="clearfix">{{ 'myExperienceContent3' | translate }}.
                 </p>
               </div>
             </div>
@@ -86,9 +57,9 @@
           <column :xs="0" :md="4" :lg="3"> </column>
           <column :xs="12" :md="8" :lg="9">
             <div class="block_about">
-              <h3 class="text_align_left">Mes Formations</h3>
+              <h3 class="text_align_left">{{ 'educations' | translate }}</h3>
               <div class="experience">
-                <h4>2019-2021 | A.E.C Développement Web Front-end</h4>
+                <h4>2019-2021 | A.E.C Developpement Web Front-end</h4>
                 <strong>Cegep de Trois-Rivières</strong>
                 <p class="clearfix">
                   HMTL5, CSS3, SASS, Bootstrap, JavaScript, React JS, Angular,
@@ -110,18 +81,16 @@
     </div>
     <div v-else>
       <label class="">
-        Vous n'êtes pas connectés.
-        <a href="#" @click="toggleLogin">Se connecter</a>
+        {{ 'notConnectedMessage' | translate }}.
+        <a href="#" @click="toggleLogin">{{ 'login' | translate }}</a>
       </label>
     </div>
   </div>
 </template>
-<button @click="showThisModal">
-  Soumettre
-</button>
 <script>
 import Vue from "vue";
 import { Row, Column } from "vue-grid-responsive";
+import mixin from '../mixins/mixin.js'
 
 Vue.component("row", Row);
 Vue.component("column", Column);
@@ -131,8 +100,10 @@ export default {
   beforeMount() {
     this.loggedIn = true;
   },
+  mixins: [mixin],
   data() {
     return {
+      language : "en",
       isLogged: this.loggedIn === undefined ? false : this.loggedIn,
     };
   },
