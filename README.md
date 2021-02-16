@@ -1,7 +1,10 @@
 # 1017examen2franckgallard
 Repository TP2
+## Commande nécessaire à la création du projet
+```
+vue create 1017examen2franckgallard
 
-## Changer la langue du projet en Français ou Anglais.
+## Changer la langue du projet en Français ou Anglais
 ```
 Dans le projet, ouvrez le fichier src/mixins/mixin.js. Et, changer la constante *language* en "en" pour voir le projet en langue anglaise ou changer la constante *language* en "fr" pour voir le projet en langue française.
 
