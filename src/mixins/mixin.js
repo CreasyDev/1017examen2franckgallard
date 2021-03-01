@@ -1,3 +1,6 @@
+// définition de la constante permettant de changer la langue du projet en Français ou Anglais
+// Pour changer la langue du projet en français faites : language = "fr"
+// Pour changer la langue du projet en anglais faites : language = "en"
 export const language = "fr";
 const TRANSLATIONS = {
   en: {
