@@ -84,6 +84,7 @@ export default {
 };
 </script>
 
+<!-- Styles css applicable uniquement à vue 'Contact.vue' --> 
 <style scoped>
 .block {
   margin: auto 10%;

@@ -22,6 +22,7 @@ export default {
 };
 </script>
 
+<!-- Styles css applicable uniquement à vue 'Footer.vue' --> 
 <style scoped>
 footer {
   margin-top: 50px;

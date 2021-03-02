@@ -64,7 +64,10 @@ import Vue from "vue";
 import { Row, Column } from "vue-grid-responsive";
 import mixin from '../mixins/mixin.js'
 
+// Passation du component 'Row' comme balise HMTL 'row'
 Vue.component("row", Row);
+
+// Passation du component 'Column' comme balise HMTL 'column'
 Vue.component("column", Column);
 
 export default {
@@ -73,7 +76,7 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Styles css applicable uniquement à vue 'Projet.vue' --> 
 <style scoped>
 h2,
 h3,

@@ -27,6 +27,7 @@ export default {
 };
 </script>
 
+<!-- Styles css applicable uniquement à vue 'Header.vue' --> 
 <style scoped>
 #nav {
   padding: 30px;

@@ -1,6 +1,8 @@
 <template>
   <div>
+    <!-- Utilisation de filtre pour traduire l'expression 'welcome'. Même mécanique partout où la traduction est appliquée. --> 
     <h3>{{ 'welcome' | translate }}!</h3>
+    <!-- Affichage du profil de l'utilisateur lorsque l'utilisateur est connecté --> 
     <div v-if="isLogged">
       <label class="">
         {{ 'connectedMessage' | translate }}.
@@ -79,6 +81,7 @@
         </row>
       </div>
     </div>
+    <!-- Affichage du boutton 'Se connecter' lorsque l'utilisateur est déconnecté --> 
     <div v-else>
       <label class="">
         {{ 'notConnectedMessage' | translate }}.
@@ -112,13 +115,13 @@ export default {
   },
   methods: {
     toggleLogin() {
-      this.isLogged = !this.isLogged;
+      this.isLogged = !this.isLogged; // fonction permettant de simuler la déconnexion et la connexion de l'utilisateur
     },
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Styles css applicable uniquement à vue 'Home.vue' --> 
 <style scoped>
 h2,
 h3,
