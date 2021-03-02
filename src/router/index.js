@@ -6,11 +6,13 @@ import Contact from '../views/Contact.vue'
 
 Vue.use(VueRouter)
 
+// La constante 'routes' contient la liste de toutes les pages du menu du projet.
+// Toute nouvelle page du menu doit etre déclarée ici.
 export const routes = [
   {
-    path: '/',
-    name: 'menuHome',
-    component: Home
+    path: '/', // Le chemin ou lien d'accès de la page
+    name: 'menuHome', // Le nom de la page. Doit être pareil que le nom déclaré dans l'objet json 'TRANSLATIONS' de traduction.
+    component: Home // la page
   },
   {
     path: '/projets',

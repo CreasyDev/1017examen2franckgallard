@@ -16,8 +16,8 @@
             <hr />
             <form>
               <div>
-                <label for="lastName">{{ 'lastName' | translate }}</label>
-                <input v-model="lastName" type="text" />
+                <label for="nom">{{ 'lastName' | translate }}</label>
+                <input v-model="nom" type="text" />
               </div>
               <br />
               <div>
@@ -33,13 +33,14 @@
               <div>
                 <label for="category">{{ 'category' | translate }}</label>
                 <select>
+                  <!-- parcours du tableau listOptions via la directive v-for afin de remplir le dropdown catégorie  --> 
                   <option v-for="option in listOptions" :key="option.value">
                     {{ option.label }}
                   </option>
                 </select>
               </div>
               <br />
-              <button @click="showThisModal">
+              <button>
                 {{ 'submit' | translate }}
               </button>
               <br />
@@ -56,7 +57,10 @@ import Vue from "vue";
 import { Row, Column } from "vue-grid-responsive";
 import mixin from '../mixins/mixin.js'
 
+// Passation du component 'Row' comme balise HMTL 'row'
 Vue.component("row", Row);
+
+// Passation du component 'Column' comme balise HMTL 'column'
 Vue.component("column", Column);
 
 export default {
@@ -64,6 +68,7 @@ export default {
   mixins: [mixin],
   data: function() {
     return {
+      // liste (tableau) contenant les options de la liste déroulante (dropdown) du champs catégorie
       listOptions: [
         { value: null, label: "Sélectionner une catégorie:" },
         { value: "demande_info", label: "Demande d'information" },
@@ -79,7 +84,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .block {
   margin: auto 10%;

@@ -2,6 +2,8 @@
 // Pour changer la langue du projet en français faites : language = "fr"
 // Pour changer la langue du projet en anglais faites : language = "en"
 export const language = "fr";
+
+// l'object json 'TRANSLATIONS' contenant à la fois l'objet json (en) des traductions en anglais et l'objet json (fr) des traductions en français
 const TRANSLATIONS = {
   en: {
     menuHome: "Home",
@@ -81,8 +83,14 @@ const TRANSLATIONS = {
 
 export default {
   filters: {
+    /**
+     * fonction de traduction des texte qui prend en parametre le texte à traduire et retourne la traduction en français ou anglais.
+     *
+     * @param {String} expression
+     * @returns {String}
+     */
     translate: function(expression) {
-      if (!expression) return "[Traductin introuvable]";
+      if (!expression) return "Traductin introuvable"; // retourne l'expression 'Traductin introuvable' si aucune traduction n'a été trouvée pour cette expression.
       expression = expression.toString();
       return TRANSLATIONS[language][expression];
     },

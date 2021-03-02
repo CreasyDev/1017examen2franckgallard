@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Ajout de la directive 'footerDirective' -->
     <footer v-footerDirective></footer>
   </div>
 </template>
@@ -8,6 +9,7 @@
 export default {
   name: "Footer",
   directives: {
+    // 'footerDirective' représente la directive personnalisée qui insère la date et le copyright dans le bas de page
     footerDirective: {
       inserted: function(el) {
         el.innerHTML =
@@ -20,7 +22,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 footer {
   margin-top: 50px;

@@ -1,8 +1,9 @@
 <template>
   <div>
     <div id="nav">
-      <router-link v-for="menu in menuList" :key="menu.name" :to="menu.path">
-        {{ menu.name | translate }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <!-- création des pages du menu via la directive v-for et affichage du menu  --> 
+      <router-link v-for="item in menuList" :key="item.name" :to="v.path">
+        {{ item.name | translate }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       </router-link>
     </div>
     <hr />
@@ -19,13 +20,13 @@ export default {
   mixins: [mixin],
   data() {
     return {
+      // Assignation de la variable 'menuList' avec les routes définies dans la constante 'routes'.
       menuList: routes,
     };
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #nav {
   padding: 30px;

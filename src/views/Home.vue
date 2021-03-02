@@ -92,19 +92,22 @@ import Vue from "vue";
 import { Row, Column } from "vue-grid-responsive";
 import mixin from '../mixins/mixin.js'
 
+// Passation du component 'Row' comme balise HMTL 'row'
 Vue.component("row", Row);
+
+// Passation du component 'Column' comme balise HMTL 'column'
 Vue.component("column", Column);
 
 export default {
   name: "Home",
+  // Utilisation du Hook 'beforeCreate' qui vérifie si l'utilisateur est connecté
   beforeMount() {
-    this.loggedIn = true;
+    this.loggedIn = true; // simulation du booléen 'loggedIn' via les valeurs true/false pour savoir s’utilisateur est connecté ou non.
   },
   mixins: [mixin],
   data() {
     return {
-      language : "en",
-      isLogged: this.loggedIn === undefined ? false : this.loggedIn,
+      isLogged: this.loggedIn === undefined ? false : this.loggedIn, // 'isLogged' récupère l'état de la connexion simulé dans via le booléan 'loggedIn'.
     };
   },
   methods: {
