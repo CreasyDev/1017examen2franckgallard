@@ -2,7 +2,7 @@
   <div>
     <div id="nav">
       <!-- création des pages du menu via la directive v-for et affichage du menu  --> 
-      <router-link v-for="item in menuList" :key="item.name" :to="v.path">
+      <router-link v-for="item in menuList" :key="item.name" :to="item.path">
         {{ item.name | translate }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       </router-link>
     </div>
