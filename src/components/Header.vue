@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="nav">
+    <div id="navh">
       <!-- création des pages du menu via la directive v-for et affichage du menu  --> 
       <router-link v-for="item in menuList" :key="item.name" :to="item.path">
         {{ item.name | translate }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

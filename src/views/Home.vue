@@ -4,8 +4,8 @@
     <h3>{{ 'welcome' | translate }}!</h3>
     <!-- Affichage du profil de l'utilisateur lorsque l'utilisateur est connecté --> 
     <div v-if="isLogged">
-      <label class="">
-        {{ 'connectedMessage' | translate }}.
+      <label>
+        <span class="userConnectionStatus">{{ 'connectedMessage' | translate }}.</span>
         <a href="#" @click="toggleLogin">{{ 'logout' | translate }}</a>
       </label>
       <hr />
@@ -83,9 +83,9 @@
     </div>
     <!-- Affichage du boutton 'Se connecter' lorsque l'utilisateur est déconnecté --> 
     <div v-else>
-      <label class="">
-        {{ 'notConnectedMessage' | translate }}.
-        <a href="#" @click="toggleLogin">{{ 'login' | translate }}</a>
+      <label>
+        <span class="userConnectionStatus">{{ 'notConnectedMessage' | translate }}.</span>
+        <button @click="toggleLogin">{{ 'login' | translate }}</button>
       </label>
     </div>
   </div>
