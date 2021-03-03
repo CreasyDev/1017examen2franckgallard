@@ -12,14 +12,15 @@ Autres raisons:
 * L’autre aspect est le monitoring dont l’avantage est de pouvoir visualiser l’état de notre application en temps réel et de la gérer
 * La dernière raison est que Heroku a une très grosse communauté de développeurs qui la supporte. Ce qui permet de trouver rapidement de l’assistance ou de l’aide lorsqu’on est bloqué sur un problème
 
-## Etapes de déploiement
+## Étapes de déploiement
 ***
 Exécuter les commandes suivantes dans l'ordre chronologique à la racine du projet:
+```
 * heroku create
 * heroku buildpacks:add heroku/nodejs
 * heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static 
 * git push heroku master
-
+```
 ## Url du site déployé
 
 https://stormy-citadel-79798.herokuapp.com
