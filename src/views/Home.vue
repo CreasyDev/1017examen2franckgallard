@@ -85,7 +85,7 @@
     <div v-else>
       <label>
         <span class="userConnectionStatus">{{ 'notConnectedMessage' | translate }}.</span>
-        <button @click="toggleLogin">{{ 'login' | translate }}</button>
+        <a href="#" @click="toggleLogin">{{ 'login' | translate }}</a>
       </label>
     </div>
   </div>
