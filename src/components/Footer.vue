@@ -15,14 +15,14 @@ export default {
         el.innerHTML =
           "Copyright © " +
           new Date().getUTCFullYear() +
-          "- Franck Gallard - All rights reserved.";
+          "- Franck Gallard - All rights reserved.&nbsp;&nbsp; <a href='https://github.com/CreasyDev/1017examen2franckgallard/blob/main/LICENSE' target='_blank'>Legal - Policy</a>";
       },
     },
   },
 };
 </script>
 
-<!-- Styles css applicable uniquement à vue 'Footer.vue' --> 
+<!-- Styles css applicable uniquement à vue 'Footer.vue' -->
 <style scoped>
 footer {
   margin-top: 50px;
@@ -31,7 +31,7 @@ footer {
   justify-content: center;
   text-align: center;
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: #c7c7c7;
+  color: black !important;
 }
 </style>
