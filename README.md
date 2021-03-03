@@ -1,13 +1,16 @@
 # 1017examen2franckgallard
 Repository TP2
+## Présentation du projet
+```
+Veuillez prendre connaissance du document word 'PresentationProjet.docx' à la racine du repository.
+
+## Besoins fonctionnels du projet
+```
+Veuillez prendre connaissance du document word 'BesoinsFonctionnels.docx' à la racine du repository.
+
 ## Commande nécessaire à la création du projet
 ```
 vue create 1017examen2franckgallard
-
-
-## Commande nécessaire à la création du projet
-```
-Veuillez prendre connaissance du document word 'PresentationProjet.docx' à la racine du repository.
 
 ## Changer la langue du projet en Français ou Anglais
 ```
