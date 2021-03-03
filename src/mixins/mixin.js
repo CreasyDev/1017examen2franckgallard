@@ -90,7 +90,7 @@ export default {
      * @returns {String}
      */
     translate: function(expression) {
-      if (!expression) return "Traductin introuvable"; // retourne l'expression 'Traductin introuvable' si aucune traduction n'a été trouvée pour cette expression.
+      if (!expression) return "Traduction introuvable"; // retourne l'expression 'Traductin introuvable' si aucune traduction n'a été trouvée pour cette expression.
       expression = expression.toString();
       return TRANSLATIONS[language][expression];
     },
