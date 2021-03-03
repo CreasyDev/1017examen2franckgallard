@@ -38,3 +38,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### License
+Voir [Apache License 2.0](https://github.com/CreasyDev/1017examen2franckgallard/blob/main/LICENSE).
