@@ -8,6 +8,8 @@ Veuillez prendre connaissance du document word 'PresentationProjet.docx' à la r
 ```
 Veuillez prendre connaissance du document word 'BesoinsFonctionnels.docx' à la racine du repository.
 ```
+### DEPLOIEMENT
+Voir [README DU DEPLOIEMENT](https://github.com/CreasyDev/1017examen2franckgallard/blob/main/DEPLOYMENT.md).
 ## Commande nécessaire à la création du projet
 ```
 vue create 1017examen2franckgallard
